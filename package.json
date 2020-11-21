@@ -1,6 +1,6 @@
 {
   "name": "qia-web-widgets-quickstart",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
@@ -48,6 +48,7 @@
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "5.0.2",
+    "qia-widgets": "^1.1.8",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.0",

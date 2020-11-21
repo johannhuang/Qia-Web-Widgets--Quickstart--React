@@ -1,38 +1,63 @@
-.App {
+qia-skeleton, qia-paginator {
+  display: inline-block;
+  margin: 1em;
+  border: 1px dotted gray;
+  padding: 1em;
+}
+
+
+.qia-skeleton-container {
+  display: inline-block;
+
+  margin: 1em;
+  border: 1px dashed gray;
+  padding: 1em;
+}
+
+.qia-skeleton-container qia-skeleton {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+
+.paged-content {
+  margin: 1em;
+  border: 1px dashed gray;
+  padding: 1em;
+}
+
+.paged-content .qia-paginator-container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.paged-content .qia-paginator-container qia-paginator {
+  margin: 0;
+  border: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.react-component-container {
+  display: inline-block;
+
+  margin: 1em;
+  border: 1px dashed gray;
+  padding: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.react-component-container .page-indicator {
+  margin: .6em;
+  border: 1px solid black;
+  padding: .4em;
+
+  display: inline-block;
+  width: 2em;
+
+  text-align: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.react-component-container .page-indicator.selected {
+  background: gray;
 }
