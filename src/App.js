@@ -18,6 +18,8 @@ class App extends React.Component {
       qiaPaginatorObject: {
         current: 4,
         total: 7,
+        // NOTE: 20201121, the API of QiaPaginatorReactComponent is subject to change
+        // NOTE: 20201121, in current design, QiaPaginatorReactComponent is a completely controlled component without internal state
         onPageChange: (event) => {
           this.setState((state, props) => {
             return {
