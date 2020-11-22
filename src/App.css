@@ -1,29 +1,22 @@
 qia-skeleton, qia-paginator {
-  display: inline-block;
-  margin: 1em;
-  border: 1px dotted gray;
-  padding: 1em;
-}
-
-
-.qia-skeleton-container {
-  display: inline-block;
-
   margin: 1em;
   border: 1px dashed gray;
   padding: 1em;
 }
 
-.qia-skeleton-container qia-skeleton {
-  margin: 0;
-  border: none;
-  padding: 0;
+
+.qia-paginator-group {
+  margin: 1em;
+  border: 1px dotted gray;
+  padding: 1em;
+
+  text-align: center;
 }
 
 
 .paged-content {
   margin: 1em;
-  border: 1px dashed gray;
+  border: 1px dotted gray;
   padding: 1em;
 }
 
@@ -38,15 +31,20 @@ qia-skeleton, qia-paginator {
 }
 
 
-.react-component-container {
-  display: inline-block;
-
+.react-components-container {
   margin: 1em;
-  border: 1px dashed gray;
+  border: 1px double gray;
   padding: 1em;
 }
 
-.react-component-container .page-indicator {
+.react-components-container .qia-skeleton,
+.react-components-container .qia-paginator {
+  margin: 1em;
+  border: 1px dotted gray;
+  padding: 1em;
+}
+
+.react-components-container .page-indicator {
   margin: .6em;
   border: 1px solid black;
   padding: .4em;
@@ -58,6 +56,6 @@ qia-skeleton, qia-paginator {
   cursor: pointer;
 }
 
-.react-component-container .page-indicator.selected {
+.react-components-container .page-indicator.selected {
   background: gray;
 }
