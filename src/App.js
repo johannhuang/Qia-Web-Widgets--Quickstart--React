@@ -33,6 +33,7 @@ class App extends React.Component {
         }
       }
     }
+    this.subscriptions = []
 
     // NOTE: for imperative in declarative
     this.nativeElement = React.createRef()
@@ -50,9 +51,17 @@ class App extends React.Component {
 
     const pageContainer = containerElement.querySelector('.page-container')
     pageContainer.innerHTML = `Qia Paginator demo - paged content for page ${92}`
-
-    qiaPaginatorElement.addEventListener('pageChanged', function (event) {
+    const qiaPaginatorElementPageChangedHandler = function (event) {
       pageContainer.innerHTML = `Qia Paginator demo - paged content for page ${event.detail.current}`
+    }
+    qiaPaginatorElement.addEventListener('pageChanged', qiaPaginatorElementPageChangedHandler)
+
+    this.subscriptions.push([qiaPaginatorElement, 'pageChanged', qiaPaginatorElementPageChangedHandler])
+  }
+
+  componentWillUnmount() {
+    this.subscriptions.forEach(([element, eventType, eventHandler]) => {
+      element.removeEventListener(eventType, eventHandler)
     })
   }
 
